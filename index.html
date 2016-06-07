@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+    <title>flextabs</title>
+    <link href="index.css" rel="stylesheet">
+    <style>
+      .flextabs__toggle--active {
+        color: red;
+      }
+      @media (min-width: 48em) {
+        .flextabs--48em .flextabs__tab {
+          order: -1;
+          width: auto;
+        }
+        .flextabs--48em .flextabs__toggle--active {
+          color: inherit;
+        }
+        .flextabs--48em .flextabs__toggle--active--last {
+          color: red;
+        }
+        .flextabs--48em .flextabs__content--active {
+          display: none;
+        }
+        .flextabs--48em .flextabs__content--active--last {
+          display: block;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h1>flextabs</h1>
+    <h2>default</h2>
+    <div class="flextabs">
+      <h3 class="flextabs__tab"><button class="flextabs__toggle">Toggle</button></h3>
+      <div class="flextabs__content">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga, maiores, et? Facere eos sunt autem, libero porro eveniet architecto dignissimos officiis. A voluptate repellat adipisci placeat illum veniam commodi sequi quidem sint reiciendis quasi deleniti delectus quo natus quisquam modi optio unde doloribus, tempora, dolore? Doloremque, nam, laudantium. <a href="#">link test</a></p>
+      </div>
+      <h3 class="flextabs__tab"><button class="flextabs__toggle">Toggle</button></h3>
+      <div class="flextabs__content">
+        <p>Ut assumenda dolorem, veritatis accusamus eaque dicta, cupiditate, perferendis nemo corporis minima tenetur laboriosam iste impedit delectus quod. Qui facere ducimus soluta hic consequatur repellendus nostrum dolores animi architecto, cum vitae perferendis sunt quibusdam tempore veniam. Eaque rem deserunt earum ex odio soluta iste harum suscipit totam a. <a href="#">link test</a></p>
+      </div>
+      <h3 class="flextabs__tab"><button class="flextabs__toggle">Toggle</button></h3>
+      <div class="flextabs__content">
+        <p>Modi laboriosam non, aliquid expedita dolor illum blanditiis dignissimos mollitia, corrupti! Tempore, sint molestias! Explicabo dignissimos modi laboriosam nulla corporis eaque ratione ea deserunt, minima dolores praesentium amet tempora at laborum repellat quasi asperiores quae voluptatum fuga atque maxime nostrum doloribus optio earum? Numquam, tempore enim! Libero, natus! <a href="#">link test</a></p>
+      </div>
+    </div>
+    <h2>switch to tabs at 48em</h2>
+    <div class="flextabs flextabs--48em">
+      <h3 class="flextabs__tab"><button class="flextabs__toggle">Toggle</button></h3>
+      <div class="flextabs__content">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga, maiores, et? Facere eos sunt autem, libero porro eveniet architecto dignissimos officiis. A voluptate repellat adipisci placeat illum veniam commodi sequi quidem sint reiciendis quasi deleniti delectus quo natus quisquam modi optio unde doloribus, tempora, dolore? Doloremque, nam, laudantium. <a href="#">link test</a></p>
+      </div>
+      <h3 class="flextabs__tab"><button class="flextabs__toggle">Toggle</button></h3>
+      <div class="flextabs__content">
+        <p>Ut assumenda dolorem, veritatis accusamus eaque dicta, cupiditate, perferendis nemo corporis minima tenetur laboriosam iste impedit delectus quod. Qui facere ducimus soluta hic consequatur repellendus nostrum dolores animi architecto, cum vitae perferendis sunt quibusdam tempore veniam. Eaque rem deserunt earum ex odio soluta iste harum suscipit totam a. <a href="#">link test</a></p>
+      </div>
+      <h3 class="flextabs__tab"><button class="flextabs__toggle">Toggle</button></h3>
+      <div class="flextabs__content">
+        <p>Modi laboriosam non, aliquid expedita dolor illum blanditiis dignissimos mollitia, corrupti! Tempore, sint molestias! Explicabo dignissimos modi laboriosam nulla corporis eaque ratione ea deserunt, minima dolores praesentium amet tempora at laborum repellat quasi asperiores quae voluptatum fuga atque maxime nostrum doloribus optio earum? Numquam, tempore enim! Libero, natus! <a href="#">link test</a></p>
+      </div>
+    </div>
+    <script src="index.js"></script>
+    <script>
+      var targets = document.querySelectorAll('.flextabs');
+      for (var i = 0; i < targets.length; i += 1) {
+        var tabs = flextabs(targets[i]);
+        tabs.init();
+      }
+    </script>
+  </body>
+</html>
