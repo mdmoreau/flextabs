@@ -18,13 +18,13 @@ Use flexbox to transition between accordion and tab views responsively.
 Include flextabs CSS
 
 ```html
-<link href="index.css" rel="stylesheet">
+<link href="flextabs.css" rel="stylesheet">
 ```
 
 Include flextabs JavaScript
 
 ```html
-<script src="index.js"></script>
+<script src="flextabs.js"></script>
 ```
 
 Call flextabs on your container element

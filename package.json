@@ -2,11 +2,11 @@
   "name": "flextabs",
   "version": "0.1.0",
   "description": "Responsive tab system built with flexbox",
-  "main": "index.js",
-  "style": "index.css",
+  "main": "flextabs.js",
+  "style": "flextabs.css",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "browser-sync start -s -f 'index.html' 'index.css' 'index.js'"
+    "dev": "browser-sync start -s -f 'index.html' 'flextabs.css' 'flextabs.js'"
   },
   "repository": {
     "type": "git",
@@ -15,7 +15,8 @@
   "keywords": [
     "tabs",
     "flexbox",
-    "responsive"
+    "responsive",
+    "accordion"
   ],
   "author": "mdmoreau",
   "license": "MIT",
