@@ -16,7 +16,12 @@
     "tabs",
     "flexbox",
     "responsive",
-    "accordion"
+    "accordion",
+    "minimal",
+    "customizable",
+    "vanilla",
+    "no jquery",
+    "accessible"
   ],
   "author": "mdmoreau",
   "license": "MIT",

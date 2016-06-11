@@ -14,33 +14,34 @@
 
     _.flextabs = target;
 
-    _.toggles = _.flextabs.querySelectorAll('.flextabs__toggle');
+    _.toggle = _.flextabs.querySelectorAll('.flextabs__toggle');
 
-    _.contents = _.flextabs.querySelectorAll('.flextabs__content');
+    _.content = _.flextabs.querySelectorAll('.flextabs__content');
 
     _.reset = function() {
-      for (var i = 0; i < _.toggles.length; i += 1) {
-        _.toggles[i].classList.remove('flextabs__toggle--active--last');
-        _.contents[i].classList.remove('flextabs__content--active--last');
+      for (var i = 0; i < _.toggle.length; i += 1) {
+        _.toggle[i].classList.remove('flextabs__toggle--active--last');
+        _.content[i].classList.remove('flextabs__content--active--last');
       }
     };
 
     _.activate = function() {
-      var i = Array.prototype.indexOf.call(_.toggles, this);
-      _.toggles[i].classList.toggle('flextabs__toggle--active');
-      _.toggles[i].classList.add('flextabs__toggle--active--last');
-      _.contents[i].classList.toggle('flextabs__content--active');
-      _.contents[i].classList.add('flextabs__content--active--last');
+      var i = Array.prototype.indexOf.call(_.toggle, this);
+      _.toggle[i].classList.toggle('flextabs__toggle--active');
+      _.toggle[i].classList.add('flextabs__toggle--active--last');
+      _.content[i].classList.toggle('flextabs__content--active');
+      _.content[i].classList.add('flextabs__content--active--last');
     };
 
-    _.click = function() {
+    _.click = function(e) {
+      e.preventDefault();
       _.reset();
       _.activate.call(this);
     };
 
     _.init = function() {
-      for (var i = 0; i < _.toggles.length; i += 1) {
-        _.toggles[i].addEventListener('click', _.click);
+      for (var i = 0; i < _.toggle.length; i += 1) {
+        _.toggle[i].addEventListener('click', _.click);
       }
     };
 
