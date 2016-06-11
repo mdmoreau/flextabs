@@ -9,6 +9,7 @@ Examples available at https://mdmoreau.github.io/flextabs/
 - CSS media queries control multi (accordion) and single (tabs) toggle views
 - Minimal styling makes it easy to integrate into any design
 - Dependency free (no jQuery)
+- Lightweight at well under 2k for both CSS and JavaScript before minification and gzip
 - Works in modern browsers that support flexbox (IE 10+)
 - Keyboard accessible
 - Logical structuring when CSS and JavaScript are disabled
