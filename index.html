@@ -5,21 +5,82 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
     <title>flextabs</title>
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet">
     <link href="flextabs.css" rel="stylesheet">
     <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        max-width: 48rem;
+        margin: auto;
+        padding: 4rem 2rem;
+        background: #eee;
+        color: #333;
+        font-family: 'lato', sans-serif;
+        line-height: 1.5;
+      }
+      h2 {
+        margin-top: 4rem;
+        margin-bottom: 1rem;
+        padding-bottom: 0.5rem;
+        border-bottom: 0.0625rem solid #ddd;
+      }
+      a {
+        border-bottom: 0.0625rem dashed orange;
+        color: #666;
+        text-decoration: none;
+      }
+      a:hover {
+        color: inherit;
+      }
+      .flextabs__tab {
+        margin-top: 0.5rem;
+        background: #ddd;
+        color: #999;
+      }
+      .flextabs__tab:first-child {
+        margin-top: 0;
+      }
+      .flextabs__toggle {
+        width: 100%;
+        padding: 1rem 2rem;
+        border: 0;
+        border-top: 0.125rem solid transparent;
+        background: none;
+        color: inherit;
+        font-family: inherit;
+        font-weight: bold;
+        text-align: left;
+        text-transform: uppercase;
+      }
       .flextabs__toggle--active {
-        color: red;
+        border-color: orange;
+        background: white;
+        color: #333;
+      }
+      .flextabs__content {
+        padding: 2rem;
+        background: white;
+        box-sizing: border-box;
       }
       @media (min-width: 64em) {
         .flextabs--64em .flextabs__tab {
           order: -1;
           width: auto;
+          margin-top: 0;
+          margin-right: 0.5rem;
         }
         .flextabs--64em .flextabs__toggle--active {
+          border-color: transparent;
+          background: none;
           color: inherit;
         }
         .flextabs--64em .flextabs__toggle--active--last {
-          color: red;
+          border-color: orange;
+          background: white;
+          color: #333;
         }
         .flextabs--64em .flextabs__content--active {
           display: none;
@@ -31,8 +92,10 @@
     </style>
   </head>
   <body>
-    <h1>flextabs / <a href="https://github.com/mdmoreau/flextabs">github</a></h1>
-    <h2>default multi toggle (accordion)</h2>
+    <h1>flextabs</h1>
+    <p>Responsive tab system built with flexbox</p>
+    <p>Documentation on <a href="https://github.com/mdmoreau/flextabs">GitHub</a></p>
+    <h2>Default multi (accordion) toggle view</h2>
     <div class="flextabs">
       <h3 class="flextabs__tab"><button class="flextabs__toggle">Toggle</button></h3>
       <div class="flextabs__content">
@@ -47,7 +110,7 @@
         <p>Modi laboriosam non, aliquid expedita dolor illum blanditiis dignissimos mollitia, corrupti! Tempore, sint molestias! Explicabo dignissimos modi laboriosam nulla corporis eaque ratione ea deserunt, minima dolores praesentium amet tempora at laborum repellat quasi asperiores quae voluptatum fuga atque maxime nostrum doloribus optio earum? Numquam, tempore enim! Libero, natus! <a href="#">link test</a></p>
       </div>
     </div>
-    <h2>single toggle (tabs) at 64em viewport width</h2>
+    <h2>Single (tabs) toggle view at 64em viewport width</h2>
     <div class="flextabs flextabs--64em">
       <h3 class="flextabs__tab"><button class="flextabs__toggle">Toggle</button></h3>
       <div class="flextabs__content">
@@ -62,7 +125,7 @@
         <p>Modi laboriosam non, aliquid expedita dolor illum blanditiis dignissimos mollitia, corrupti! Tempore, sint molestias! Explicabo dignissimos modi laboriosam nulla corporis eaque ratione ea deserunt, minima dolores praesentium amet tempora at laborum repellat quasi asperiores quae voluptatum fuga atque maxime nostrum doloribus optio earum? Numquam, tempore enim! Libero, natus! <a href="#">link test</a></p>
       </div>
     </div>
-    <h2>set initial active tabs</h2>
+    <h2>Set initial active items in HTML</h2>
     <div class="flextabs flextabs--64em">
       <h3 class="flextabs__tab"><button class="flextabs__toggle flextabs__toggle--active">Toggle</button></h3>
       <div class="flextabs__content  flextabs__content--active">
@@ -74,21 +137,6 @@
       </div>
       <h3 class="flextabs__tab"><button class="flextabs__toggle flextabs__toggle--active">Toggle</button></h3>
       <div class="flextabs__content flextabs__content--active">
-        <p>Modi laboriosam non, aliquid expedita dolor illum blanditiis dignissimos mollitia, corrupti! Tempore, sint molestias! Explicabo dignissimos modi laboriosam nulla corporis eaque ratione ea deserunt, minima dolores praesentium amet tempora at laborum repellat quasi asperiores quae voluptatum fuga atque maxime nostrum doloribus optio earum? Numquam, tempore enim! Libero, natus! <a href="#">link test</a></p>
-      </div>
-    </div>
-    <h2>tab/toggle variations</h2>
-    <div class="flextabs">
-      <h3 class="flextabs__tab"><button class="flextabs__toggle">Toggle</button></h3>
-      <div class="flextabs__content">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga, maiores, et? Facere eos sunt autem, libero porro eveniet architecto dignissimos officiis. A voluptate repellat adipisci placeat illum veniam commodi sequi quidem sint reiciendis quasi deleniti delectus quo natus quisquam modi optio unde doloribus, tempora, dolore? Doloremque, nam, laudantium. <a href="#">link test</a></p>
-      </div>
-      <h3 class="flextabs__tab"><a href="#" class="flextabs__toggle">Toggle</a></h3>
-      <div class="flextabs__content">
-        <p>Ut assumenda dolorem, veritatis accusamus eaque dicta, cupiditate, perferendis nemo corporis minima tenetur laboriosam iste impedit delectus quod. Qui facere ducimus soluta hic consequatur repellendus nostrum dolores animi architecto, cum vitae perferendis sunt quibusdam tempore veniam. Eaque rem deserunt earum ex odio soluta iste harum suscipit totam a. <a href="#">link test</a></p>
-      </div>
-      <a href="#" class="flextabs__tab flextabs__toggle">Toggle</a>
-      <div class="flextabs__content">
         <p>Modi laboriosam non, aliquid expedita dolor illum blanditiis dignissimos mollitia, corrupti! Tempore, sint molestias! Explicabo dignissimos modi laboriosam nulla corporis eaque ratione ea deserunt, minima dolores praesentium amet tempora at laborum repellat quasi asperiores quae voluptatum fuga atque maxime nostrum doloribus optio earum? Numquam, tempore enim! Libero, natus! <a href="#">link test</a></p>
       </div>
     </div>
