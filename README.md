@@ -48,7 +48,7 @@ You can also install flextabs using npm:
 npm install flextabs --save
 ```
 
-UMD is used to support both AMD and CommonJS environments.  For example, with Browserify you could use `var flextabs = require('flextabs')` at the top of the above script block.
+UMD is used to support both AMD and CommonJS environments.  For example, with Browserify you could use `var flextabs = require('flextabs');` at the top of the above script block.
 
 ## Example
 
