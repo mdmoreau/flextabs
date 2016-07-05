@@ -9,12 +9,14 @@ Examples available at https://mdmoreau.github.io/flextabs/
 - CSS media queries control multi (accordion) and single (tabs) toggle views
 - Minimal styling makes it easy to integrate into any design
 - Dependency free (no jQuery)
-- Lightweight at well under 2k for both CSS and JavaScript before minification and gzip
+- Lightweight at under 2k for both CSS and JavaScript before minification and gzip
 - Works in modern browsers that support flexbox (IE 10+)
 - Keyboard accessible
 - Logical structuring when CSS and JavaScript are disabled
 
 ## Install
+
+### Standard
 
 Include flextabs CSS:
 
@@ -38,7 +40,19 @@ for (var i = 0; i < targets.length; i += 1) {
 }
 ```
 
-## Example Markup
+### npm
+
+You can also install flextabs using npm:
+
+```
+npm install flextabs --save
+```
+
+UMD is used to support both AMD and CommonJS environments.  For example, with Browserify you could use `var flextabs = require('flextabs')` at the top of the above script block.
+
+## Example
+
+### Markup
 
 In this example `flextabs` is used as the container class, but it can be set to whatever selector is called through your JavaScript.  The only restriction in element ordering is that pairs of `flextabs__toggle` and `flextabs__content` should always both appear before another pair.
 
@@ -64,7 +78,7 @@ In this example `flextabs` is used as the container class, but it can be set to 
   </div>
 </div>
 ```
-## Example CSS
+### CSS
 
 The following shows how you can switch from multi (accordion) to single (tabs) toggle view using media queries.
 
@@ -112,11 +126,3 @@ Determines the active items for multi (accordion) toggle view.  Individual item 
 `flextabs__toggle--active--last`, `flextabs__content--active--last`
 
 Classes that will be active on the last activated item and removed from all others.  This is used for the single (tabs) toggle view as only one item is active at a time.  One pair can be added directly to the HTML to set the active item for initial page load.
-
-## npm
-
-You can also install flextabs using npm.  UMD is used to support both AMD and CommonJS-like environments.
-
-```
-npm install flextabs --save
-```
