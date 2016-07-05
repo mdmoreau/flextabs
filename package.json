@@ -1,6 +1,6 @@
 {
   "name": "flextabs",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Responsive tab system built with flexbox",
   "main": "flextabs.js",
   "style": "flextabs.css",
