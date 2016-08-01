@@ -62,7 +62,7 @@ In this example `flextabs` is used as the container class, but it can be set to 
     <button class="flextabs__toggle">Toggle</button>
   </h3>
   <div class="flextabs__content">
-    <p>Tab 1 content</a></p>
+    <p>Tab 1 content</p>
   </div>
   <h3 class="flextabs__tab">
     <button class="flextabs__toggle">Toggle</button>
