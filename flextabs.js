@@ -33,14 +33,28 @@
       _.content[i].classList.add('flextabs__content--active--last');
     };
 
+    _.aria = function() {
+      for (var i = 0; i < _.toggle.length; i += 1) {
+        var style = getComputedStyle(_.content[i]);
+        if (style.getPropertyValue('display') !== 'none') {
+          _.toggle[i].setAttribute('aria-expanded', true);
+        } else {
+          _.toggle[i].setAttribute('aria-expanded', false);
+        }
+      }
+    };
+
     _.click = function(e) {
       e.preventDefault();
       _.reset();
       _.activate.call(this);
+      _.aria();
     };
 
     _.init = function() {
       for (var i = 0; i < _.toggle.length; i += 1) {
+        window.addEventListener('load', _.aria);
+        window.addEventListener('resize', _.aria);
         _.toggle[i].addEventListener('click', _.click);
       }
     };
