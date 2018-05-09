@@ -30,6 +30,6 @@
   },
   "homepage": "https://github.com/mdmoreau/flextabs#readme",
   "devDependencies": {
-    "browser-sync": "^2.12.12"
+    "browser-sync": "^2.24.4"
   }
 }
